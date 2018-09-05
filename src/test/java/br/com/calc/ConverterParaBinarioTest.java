@@ -9,13 +9,25 @@ public class ConverterParaBinarioTest {
 	
 	@Test
 	public void converterDoisParaI0() {
-		Double resultado = (double) converteBinario.converteParaBinario(2);
-		Assert.assertEquals(new Double(10), resultado);
+		int  resultado = converteBinario.convertBinary(2);
+		Assert.assertEquals(10, resultado);
 	}
 	
 	@Test
-	public void converterDezPara1010() {
-		Double resultado = (double) converteBinario.converteParaBinario(2);
-		Assert.assertEquals(new Double(1010), resultado);
+	public void converter10Para1010() {
+		int resultado = converteBinario.convertBinary(10);
+		Assert.assertEquals(1010, resultado);
+	}
+	
+	@Test
+	public void converter22Para10110() {
+		int resultado = converteBinario.convertBinary(22);
+		Assert.assertEquals(10110, resultado);
+	}
+	
+	@Test
+	public void converter0Para0() {
+		int resultado = converteBinario.convertBinary(0);
+		Assert.assertEquals(0, resultado);
 	}
 }
